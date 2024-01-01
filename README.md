@@ -1,11 +1,11 @@
-# Stone, Paper, Scissors Game
+# Rock, Paper, Scissors Game
 ---
-Simple project for stone, paper, scissors game made with pure C++ using simple procedural programming.
+Simple project for rock, paper, scissors game made with pure C++ using simple procedural programming.
 ---
 ## How to play
 1. Compile the code (more on this later).
 2. Start the game by entering the number of rounds you want to play ranging from 1 to 10.
-3. The game will prompt you to enter stone (1) or paper (2) or scissors (3).
+3. The game will prompt you to enter rock (1) or paper (2) or scissors (3).
 4. After entering your discision the computer will generate a random discision.
 5. The game will check if its a draw or your win or computer wins based on the inputs.
 6. After finishing all the rounds there will be a Game Over page that shows game info and results.
