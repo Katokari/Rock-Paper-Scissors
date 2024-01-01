@@ -4,7 +4,7 @@
 using namespace std;
 
 enum enPlayerType { Player1 = 1, Computer = 2 };
-enum enChoices { Stone = 1, Paper = 2, Scissors = 3 };
+enum enChoices { Rock = 1, Paper = 2, Scissors = 3 };
 enum enGameWinner { WPlayer1 = 3, WComputer = 4, WDraw = 5 };
 
 struct stGameResults
@@ -37,7 +37,7 @@ enChoices GetChoice(enPlayerType PlayerType)
     {  
         do
         {
-            cout << "\nYour Choice: [1]:Stone, [2]:Paper, [3]:Scissors ? ";
+            cout << "\nYour Choice: [1]:Rock, [2]:Paper, [3]:Scissors ? ";
             cin >> Choice;
         } while (Choice < 1 || Choice > 3);
         return (enChoices) Choice;
@@ -51,7 +51,7 @@ enChoices GetChoice(enPlayerType PlayerType)
 
 enGameWinner CheckWinner(enChoices Player1Choice ,enChoices ComputerChoice)
 {
-    if (Player1Choice == enChoices::Stone)
+    if (Player1Choice == enChoices::Rock)
     {
         switch (ComputerChoice)
         {
@@ -65,7 +65,7 @@ enGameWinner CheckWinner(enChoices Player1Choice ,enChoices ComputerChoice)
     {
         switch (ComputerChoice)
         {
-            case enChoices::Stone:
+            case enChoices::Rock:
                 return enGameWinner::WPlayer1;
             case enChoices::Scissors:
                 return enGameWinner::WComputer;
@@ -77,7 +77,7 @@ enGameWinner CheckWinner(enChoices Player1Choice ,enChoices ComputerChoice)
         {
             case enChoices::Paper:
                 return enGameWinner::WPlayer1;
-            case enChoices::Stone:
+            case enChoices::Rock:
                 return enGameWinner::WComputer;
         }
     }   
@@ -89,8 +89,8 @@ string ChoicesToString(enChoices Choice)
 {
     switch(Choice)
     {
-        case enChoices::Stone:
-            return "Stone";
+        case enChoices::Rock:
+            return "Rock";
         case enChoices::Paper:
             return "Paper";
         case enChoices::Scissors:
